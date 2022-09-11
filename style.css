@@ -1,0 +1,41 @@
+/* body */
+body {
+    background: #efefef;
+}
+/* contetn */
+
+/* form */
+.form {
+    background: rgb(248 249 250);
+    padding-top: 1vw;
+}
+input[type=text] {
+    padding: 2px;
+    margin: 4px 0;
+    box-sizing: border-box;
+}
+input[type=number] {
+    padding: 2px;
+    margin: 4px 0;
+    box-sizing: border-box;
+}
+input[type=email] {
+    padding: 2px;
+    margin: 4px 0;
+    box-sizing: border-box;
+}
+
+/* submit */
+.form .btn {
+    width: 100%;
+    margin-top: 2vw;
+}
+/* responsive */
+@media (max-width:767px) {
+    .col-md-3 {
+        text-align: center;
+    }
+    .col-md-4 {
+        text-align: right;
+    }
+}

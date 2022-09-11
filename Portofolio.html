@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light mb-3">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler ms-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 pe-5">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="../profil.html"
+                >HOME</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">PRODUCT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">GALERY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">INVENTORY</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- content -->
+    <div class="content" style="padding: 2vw">
+      <div class="content-fluid bg-light shadow p-3 mb-4">
+        <div class="row align-items-center" style="padding-bottom: 3vw">
+          <div class="col-md-3 text-center">
+            <img src="user.jpeg" style="border-radius: 50%" alt="user" />
+          </div>
+          <div class="col-md-3">
+            <h1 id="nama">Nama Anda</h1>
+            <p id="role">Front End Designer</p>
+            <button class="btn btn-primary" type="submit">Kontak</button>
+            <button class="btn btn-outline-success" type="submit">
+              Daftar
+            </button>
+          </div>
+          <div class="col-md-6">
+            <div class="row row-cols-2">
+              <div class="col-md-4">
+                <p>Availability</p>
+                <p>Usia</p>
+                <p>Lokasi</p>
+                <p>Pengalaman</p>
+                <p>Email</p>
+              </div>
+              <div class="col-md-8">
+                <p id="availability">Full Time</p>
+                <p id="usia">19</p>
+                <p id="lokasi">Jakarta</p>
+                <p id="pengalaman">2</p>
+                <p id="email">email@email.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- form -->
+      <div class="form">
+        <form onsubmit="submitForm()">
+          <label for="nama">Nama</label>
+          <input
+            type="text"
+            class="form-control"
+            id="input-nama"
+            placeholder="masukan nama Anda"
+          />
+
+          <label for="nama">Role</label>
+          <input type="text" id="input-role" class="form-control" />
+
+          <label for="nama">Availability</label>
+          <input type="text" id="input-availability" class="form-control" />
+
+          <label for="usia">Usia</label>
+          <input type="number" id="input-usia" class="form-control" />
+
+          <label for="nama">Lokasi</label>
+          <input type="text" id="input-lokasi" class="form-control" />
+
+          <label for="nama">Years Experience</label>
+          <input type="number" id="input-pengalaman" class="form-control" />
+
+          <label for="email">Email</label>
+          <input type="email" id="input-email" class="form-control" />
+
+          <!-- submit -->
+          <input class="btn btn-success" type="submit" value="submit" />
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function submitForm() {
+        event.preventDefault();
+
+        const inputNama = document.getElementById("input-nama").value;
+        document.getElementById("nama").innerText = inputNama;
+
+        const inputRole = document.getElementById("input-role").value;
+        document.getElementById("role").innerText = inputRole;
+
+        const inputAvailability =
+          document.getElementById("input-availability").value;
+        document.getElementById("availability").innerText = inputAvailability;
+
+        const inputUsia = document.getElementById("input-usia").value;
+        document.getElementById("usia").innerText = inputUsia;
+
+        const inputLokasi = document.getElementById("input-lokasi").value;
+        document.getElementById("lokasi").innerText = inputLokasi;
+
+        const inputPengalaman =
+          document.getElementById("input-pengalaman").value;
+        document.getElementById("pengalaman").innerText = inputPengalaman;
+
+        const inputEmail = document.getElementById("input-email").value;
+        document.getElementById("email").innerText = inputEmail;
+      }
+    </script>
+  </body>
+</html>
